@@ -10,7 +10,7 @@ key_client = SecretClient(vault_url=config.KVUri, credential=config.credential)
 
 CONN_STRING_KEY = config.conn_secret_key
 DB_NAME = config.db_name
-CONTAINER_NAME = config.container_name
+CONTAINER_NAME = 'storys'
 CONN_STRING = key_client.get_secret(CONN_STRING_KEY)
 
 def create_story(req: func.HttpRequest, collection) -> func.HttpResponse:
